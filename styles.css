@@ -1,0 +1,65 @@
+/* styles.css - extracted from single-file site
+   Save alongside index.html and app.js. Put your images under assets/ folder.
+*/
+:root{
+  --accent:#0f766e; --accent-2:#095c51; --muted:#6b7280; --card:#ffffff; --shadow:0 8px 24px rgba(12,15,20,0.06);
+  --radius:12px; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:linear-gradient(180deg,#f7fbfb,#fbfdff);color:#0f172a}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+header{position:sticky;top:0;backdrop-filter: blur(6px);background:rgba(255,255,255,0.6);border-bottom:1px solid rgba(15,23,42,0.04);z-index:40}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:46px}
+nav ul{display:flex;gap:16px;align-items:center;margin:0;padding:0;list-style:none}
+.cta{background:var(--accent);color:white;padding:10px 16px;border-radius:10px;box-shadow:var(--shadow);font-weight:600}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(15,118,110,0.08);color:var(--accent-2);font-weight:600}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:48px 0}
+.hero-left h1{font-size:34px;margin:0 0 12px;line-height:1.02}
+.hero-actions{display:flex;gap:12px}
+.card{background:var(--card);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+.info-card{display:flex;gap:12px;align-items:center;margin-top:18px}
+.info-card img{height:70px;width:110px;object-fit:cover;border-radius:8px}
+.features{display:flex;gap:12px;margin-top:10px}
+.features div{min-width:120px}
+.hero-right .hero-img{width:100%;height:260px;object-fit:cover;border-radius:10px}
+
+/* Services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.services .item{padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.85),rgba(248,250,252,0.9));border:1px solid rgba(12,15,20,0.03)}
+
+/* Projects */
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.projects img{width:100%;height:170px;object-fit:cover;border-radius:10px}
+
+/* Why grid */
+.why-grid{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px}
+.why-grid .card{flex:1;min-width:220px}
+
+/* Testimonials */
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
+.testimonial{padding:16px;border-radius:12px;background:rgba(255,255,255,0.6)}
+
+/* Contact */
+footer{margin-top:36px;padding:36px 0;background:linear-gradient(180deg,#fff,#f6fbfb);border-top:1px solid rgba(15,23,42,0.03)}
+.contact-grid{display:grid;grid-template-columns:1fr 360px;gap:20px}
+.contact-cards{display:flex;gap:12px;margin-top:12px}
+.contact-cards .card{padding:12px}
+.team-row{display:flex;gap:12px;align-items:center;margin-top:8px}
+.team-row img{height:70px;width:70px;object-fit:cover;border-radius:8px}
+
+/* Form */
+.form-row{display:flex;gap:8px}
+input,textarea,select{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(12,15,20,0.06)}
+button{cursor:pointer}
+.map-embed{max-width:1100px;margin:18px auto}
+
+/* Responsive */
+@media (max-width:1000px){ .hero{grid-template-columns:1fr;} .features,.services,.projects,.testimonials{grid-template-columns:repeat(2,1fr)} .contact-grid{grid-template-columns:1fr} }
+@media (max-width:600px){ nav ul{display:none} .brand img{height:36px} .features,.services,.projects,.testimonials{grid-template-columns:1fr} }
